@@ -6,17 +6,17 @@ def qsort(arr,left,right):
     if left<right:
         i=left
         j=right
-        pivot = a[i+int((j-i)/2)]
+        pivot = arr[i+int((j-i)/2)]
         while True:
-            while a[i]<pivot:
+            while arr[i]<pivot:
                 i+=1
-            while pivot<a[j]:
+            while pivot<arr[j]:
                 j-=1
             if i>=j:
                 break
-            tmp = a[i]
-            a[i]=a[j]
-            a[j]=tmp
+            tmp = arr[i]
+            arr[i]=arr[j]
+            arr[j]=tmp
             i+=1
             j-=1
         qsort(arr,left,i-1)
